@@ -8,8 +8,16 @@
 public class Rectangle 
 {
 	public String name = "SomeRectangle";
-	public double length = 1.0;
-	public double width = 1.0;
+	public double length;
+	public double width;
+	
+	public void initialize(String n, double l, double w)
+	{
+		name = n;
+		length = l;
+		width = w;
+	}
+	
 	
 	public double area()
 	{
