@@ -7,7 +7,7 @@
 
 public class Rectangle 
 {
-	public String name = "SomeRectangle";
+	public String name;
 	public double length;
 	public double width;
 	
