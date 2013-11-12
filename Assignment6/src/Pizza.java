@@ -31,7 +31,7 @@ public class Pizza
 		}
 		
 		
-		public boolean setStatus(char status)
+		public boolean setStatus(int status)
 		{
 			boolean isValid = false;
 			if ((status == 0) || (status == 1) || (status == 2))	{ isValid = true; }
@@ -40,10 +40,17 @@ public class Pizza
 		}
 		
 		
-		public void setToppings(String [] t)
+		public void setToppings(String [] toppings)
 		{
-			toppings = t;
+			String[] t = new String[numToppings];
+			
 		}
+		
+		public void numToppings()
+		{
+			
+		}
+
 		
 		
 }

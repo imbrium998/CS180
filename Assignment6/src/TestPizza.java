@@ -9,7 +9,7 @@ public class TestPizza {
 	 */
 	public static void main(String[] args) 
 	{
-		int numToppings = 0;
+		int numToppings = 3;
 		String[] topping = new String[numToppings];
 			
 		Scanner kb = new Scanner(System.in);
@@ -24,7 +24,7 @@ public class TestPizza {
 		for (int i = 0; i <= numToppings; i++)
 		{
 						System.out.println("Please enter topping number " + (i + 1));
-						topping[i] = kb.next();
+						topping[i] = kb.nextLine();
 						
 		}
 		
