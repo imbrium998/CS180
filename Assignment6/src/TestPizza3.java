@@ -9,6 +9,18 @@ public class TestPizza3 {
 		
 		Pizza pizza1 = new Pizza();
 		
+		String[] toppings = new String[5];
+		toppings[0] = "moo";
+		toppings[1] = "goo";
+		toppings[2] = "gai";
+		toppings[3] = "pan";
+		
+				
+		pizza1.setToppings(toppings);
+		System.out.println();
+		
+		
+		
 		pizza1.setStatus(1);
 		pizza1.setSize('M');
 		pizza1.getToppings();
@@ -24,7 +36,8 @@ public class TestPizza3 {
 		String[] strArray = new String[] {"John", "Mary", "Bob"};
 		//output: [John, Mary, Bob]	
 		
-		
+		System.out.println(pizza1.calcPrice(5,  'S'));
+		System.out.println(pizza1.numToppings());
 		
 
 	}

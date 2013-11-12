@@ -42,15 +42,51 @@ public class Pizza
 		
 		public void setToppings(String [] toppings)
 		{
-			String[] t = new String[numToppings];
+		
+			this.toppings = toppings;
 			
 		}
 		
-		public void numToppings()
+		public int numToppings()
 		{
+			int tNull = 0; 
+			if ( toppings != null) 
+					{tNull = 1; }
+			else tNull = 0;
+			return tNull;
+		}
+		
+		
+		public double calcPrice(int numToppings, char size)
+		{
+			double pizzaPrice = 0.0;
 			
+			switch (size)
+				{case 'S': 
+					pizzaPrice = 8.00;
+					pizzaPrice = pizzaPrice + (numToppings * 1.00);
+					break;
+					
+				case  'M':
+					pizzaPrice = 9.00;
+					pizzaPrice = pizzaPrice + (numToppings * 1.50);
+					break;
+					
+				case  'L':
+					pizzaPrice = 10.00;
+					pizzaPrice = pizzaPrice + (numToppings * 2.00);
+					break;
+					
+				default:
+					pizzaPrice = 0.00;
+					break;}
+			
+			
+				
+			return pizzaPrice;
+
 		}
 
-		
+
 		
 }
