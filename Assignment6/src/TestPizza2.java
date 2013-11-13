@@ -27,7 +27,7 @@ public class TestPizza2 {
 		
 		for (int i = 0; i < numToppings ; i++)
 			{
-						System.out.print("Please enter topping number " + " " + (i + 1));
+						System.out.print("Please enter topping number " + (i + 1) + " ");
 						tops[i] = kb.next();
 								
 			}
