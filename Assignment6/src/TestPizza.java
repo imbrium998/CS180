@@ -41,6 +41,9 @@ public static void main(String[] args) {
 		
 		}
 		
+		pizza1.setToppings(tops);
+
+		System.out.println(pizza1.toString());
 			
 		System.out.println();
 		System.out.println(Arrays.toString(tops));

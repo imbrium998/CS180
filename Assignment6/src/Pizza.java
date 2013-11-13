@@ -25,7 +25,10 @@ public class Pizza
 		{
 			boolean isValid = false;
 			if ((size == 'S') || (size == 'M') || (size == 'L')) 	{ isValid = true; } 
-			else {isValid = false;}
+			else {size = 'M';
+					isValid = false;}
+			
+			this.size = size;
 		
 			return isValid;
 		}
@@ -49,11 +52,11 @@ public class Pizza
 		
 		public int numToppings()
 		{
-			int tNull = 0; 
+			int t = 0; 
 			if ( toppings != null) 
-					{tNull = 1; }
-			else tNull = 0;
-			return tNull;
+					{t = toppings.length;}
+			else t = 0;
+			return t;
 		}
 		
 		
@@ -84,7 +87,7 @@ public class Pizza
 				return pizzaPrice;
 
 		}
-
-
+		
+		
 		
 }
