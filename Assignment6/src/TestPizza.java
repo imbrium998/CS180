@@ -1,5 +1,6 @@
-import java.util.Arrays;
 import java.util.Scanner;
+//import java.util.Arrays;
+//import java.text.DecimalFormat;
 
 
 
@@ -8,49 +9,66 @@ public class TestPizza {
 	/**
 	 * @param args
 	 */
-public static void main(String[] args) {
+	public static void main(String[] args) {
 		
 		int numToppings = 0;
 		Pizza pizza1 = new Pizza();
-		
-		
-			
-		
 		Scanner kb = new Scanner(System.in);
 		
+		// Ask user to define the size of the pizza to make.  Set pizza1.size
 		System.out.print("Please enter the size of pizza (S, M or L): ");
-		String s = kb.nextLine();
-		char cs = s.charAt(0);
+		String size = kb.nextLine();
+		char cs = size.charAt(0);
+		pizza1.setSize(cs);
 		
+		
+		// Ask user to define the number of toppings they would like to include on pizza.
 		System.out.print("How many toppings would you like to add to the pizza? ");
 		numToppings = kb.nextInt();
+		pizza1.numToppings();
+		
 		String[] tops = new String[numToppings];
 		
 		for (int i = 0; i < numToppings ; i++)
 			{
 						System.out.print("Please enter topping number " + (i + 1) + " ");
 						tops[i] = kb.next();
+						//System.out.println(Arrays.toString(tops));
 								
 			}
 		
 		
 		
+		pizza1.setToppings(tops);
+		pizza1.calcPrice(pizza1.numToppings(),pizza1.getSize());   // int numToppings, char size
+		
+			
+				
 		for (int i = 0; i < 50; i++) 
 		{		
 				System.out.print("*");
 		
 		}
 		
-		pizza1.setToppings(tops);
-
-		System.out.println(pizza1.toString());
-			
 		System.out.println();
-		System.out.println(Arrays.toString(tops));
-		System.out.println(pizza1.setSize(cs));
+		System.out.println("Created a pizza of size " + pizza1.getSize() + " and " + pizza1.numToppings() + " toppings:");
 		
+		for (int i = 0; i < pizza1.numToppings(); i++)
+		{
+				String[] toppings = pizza1.getToppings();
+				System.out.println((i + 1) + ".  " + toppings[i]);
+		}
 		
+		System.out.println("This pizza costs " + pizza1.calcPrice(pizza1.numToppings(), pizza1.getSize()));
+
 		
+		System.out.println("Pizza readiness status is " + pizza1.getStatus());
+		
+		for (int i = 0; i < 50; i++) 
+		{		
+				System.out.print("*");
+		
+		}
 		
 		kb.close();
 

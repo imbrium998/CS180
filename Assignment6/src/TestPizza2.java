@@ -1,5 +1,7 @@
 import java.util.Scanner;
 import java.util.Arrays;
+//import java.text.DecimalFormat;
+
 
 
 public class TestPizza2 {
@@ -53,10 +55,11 @@ public class TestPizza2 {
 		
 		for (int i = 0; i < pizza1.numToppings(); i++)
 		{
-				System.out.println((i + 1) + ".  " + pizza1.getToppings());
+				String[] toppings = pizza1.getToppings();
+				System.out.println((i + 1) + ".  " + toppings[i]);
 		}
 		
-		System.out.println("This pizza costs " );
+		System.out.println("This pizza costs " + pizza1.calcPrice(pizza1.numToppings(), pizza1.getSize()));
 
 		
 		System.out.println("Pizza readiness status is " + pizza1.getStatus());

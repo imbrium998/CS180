@@ -20,7 +20,7 @@ public class Pizza
 	
 		
 		
-	// Create methods used 
+	// Create method to accept a pizza size */* set size to medium if the input is not valid parameter  
 		public boolean setSize(char size)
 		{
 			boolean isValid = false;
@@ -33,7 +33,7 @@ public class Pizza
 			return isValid;
 		}
 		
-		
+	// 	Method to denote status of pizza (where in the creation process it is)	
 		public boolean setStatus(int status)
 		{
 			boolean isValid = false;
@@ -41,7 +41,7 @@ public class Pizza
 			else {isValid = false;}
 			return isValid;
 		}
-		
+	// Method to hold the pizza toppings in an array to be used to create order 	
 		
 		public void setToppings(String [] toppings)
 		{
@@ -50,6 +50,7 @@ public class Pizza
 			
 		}
 		
+	// Method to hold the number of toppings the user is asked	
 		public int numToppings()
 		{
 			int t = 0; 
@@ -62,6 +63,7 @@ public class Pizza
 		
 		public double calcPrice(int numToppings, char size)
 		{
+					
 			double pizzaPrice = 0.0;
 			
 			switch (size)
