@@ -117,24 +117,24 @@ public class PizzaGUI extends JFrame implements ActionListener {
 		if(e.getSource()==done){
 
 			// collect selected toppings
-			ArrayList<String> top = new ArrayList<String>();
+			ArrayList<String> top =new ArrayList<String>();
 			top.clear();
 			for (int i = 0; i< tps.length; i++)
 				if (tps[i].isSelected())
 					top.add(tps[i].getText());
 			String [] top2 = top.toArray(new String[top.size()]);
 
-			Pizza newpizza = new Pizza();
+			Pizza newpizza= new Pizza();
 			newpizza.setToppings(top2);
-			char size1 =' ';
+			char size1=' ';
 			if(small.isSelected()){
-				size1 = 'S';
+				size1= 'S';
 			}
 			if(medium.isSelected()){
 				size1 ='M';
 			}
 			if(large.isSelected()){
-				size1 ='L';
+				size1='L';
 			}
 
 			newpizza.setSize(size1);
@@ -143,14 +143,13 @@ public class PizzaGUI extends JFrame implements ActionListener {
 			pizzaDescription += "Created a pizza of size " + newpizza.getSize() + 
 					" with " + newpizza.numToppings() + " toppings: " ;
 
-			for (int i = 0; i <= newpizza.numToppings()-1; i++)
-				{
-					pizzaDescription += "\n " + (i+1)+ ". " + newpizza.getToppings()[i];
-				}
+			for (int i = 0; i<=newpizza.numToppings()-1; i++){
+				pizzaDescription += "\n " + (i+1)+ ". " + newpizza.getToppings()[i];
+			}
 
 			DecimalFormat df = new DecimalFormat("0.00");	
-			double price = newpizza.calcPrice();   //   What happened here?
-			pizzaDescription += "\n " +"This pizza costs $"+ df.format(price);
+			double price = newpizza.calcPrice();
+			pizzaDescription += "\n " +"This pizza costs $"+ df.format (price);
 			pizzaDescription += "\n " +"Pizza readiness status is  "+ newpizza.getStatus();
 
 

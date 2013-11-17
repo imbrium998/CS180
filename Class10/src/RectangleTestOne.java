@@ -24,6 +24,6 @@ public class RectangleTestOne
 		rectangle1.print();
 		rectangle2.print();
 		
-
+		System.out.println(rectangle2.toString());
 	}
 }

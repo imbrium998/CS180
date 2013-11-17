@@ -24,8 +24,10 @@ public class Pizza
 		public boolean setSize(char size)
 		{
 			boolean isValid = false;
-			if ((size == 'S') || (size == 'M') || (size == 'L')) 	{ isValid = true; } 
-			else {size = 'M';
+			if ((size == 'S') || (size == 'M') || (size == 'L')) 	
+					{ isValid = true; } 
+			else 
+					{size = 'M';
 					isValid = false;}
 			
 			this.size = size;
@@ -61,7 +63,7 @@ public class Pizza
 		}
 		
 		
-		public double calcPrice(int numToppings, char size)
+		public double calcPrice()
 		{
 					
 			double pizzaPrice = 0.0;
@@ -69,17 +71,17 @@ public class Pizza
 			switch (size)
 				{case 'S': 
 					pizzaPrice = 8.00;
-					pizzaPrice = pizzaPrice + (numToppings * 1.00);
+					pizzaPrice = pizzaPrice + (toppings.length * 1.00);
 					break;
 					
 				case  'M':
 					pizzaPrice = 9.00;
-					pizzaPrice = pizzaPrice + (numToppings * 1.50);
+					pizzaPrice = pizzaPrice + (toppings.length * 1.50);
 					break;
 					
 				case  'L':
 					pizzaPrice = 10.00;
-					pizzaPrice = pizzaPrice + (numToppings * 2.00);
+					pizzaPrice = pizzaPrice + (toppings.lengthpings * 2.00);
 					break;
 					
 				default:

@@ -48,6 +48,9 @@ public class TestPizza3 {
 		System.out.println(pizza1.calcPrice(5,  'S'));
 		System.out.println(pizza1.numToppings());
 		
+		if (pizza1.size = 0){
+			
+		}
 		
 		
 

@@ -11,11 +11,12 @@ public class Rectangle
 	public double length;
 	public double width;
 	
-	public void initialize(String n, double l, double w)
+	public void initialize(String name, double length, double width)
 	{
-		name = n;
-		length = l;
-		width = w;
+		this.name = name;
+		this.length = length;
+		this.width = width;
+		this.toString();
 	}
 	
 	
@@ -47,6 +48,22 @@ public class Rectangle
 		System.out.println();
 		
 	}
+	public String toString()
+	{
+		return name + " ( " + length + "," + width + ")";
+	}
 	
+	// constructor
+	public Rectangle( String name, double length, double width )
+	{
+		this.name = name;
+		this.length = length;
+		this.width = width;
+	}
 	
+	public Rectangle()
+	
+	{
+		this(10.0,10.0);
+	}
 }
