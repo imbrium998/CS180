@@ -149,7 +149,7 @@ public class PizzaGUI extends JFrame implements ActionListener {
 				}
 
 			DecimalFormat df = new DecimalFormat("0.00");	
-			double price = newpizza.calcPrice();   //   What happened here?
+			double price = newpizza.calcPrice();   
 			pizzaDescription += "\n " +"This pizza costs $"+ df.format(price);
 			pizzaDescription += "\n " +"Pizza readiness status is  "+ newpizza.getStatus();
 

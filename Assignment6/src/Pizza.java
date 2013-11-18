@@ -1,4 +1,15 @@
 
+	/**
+	 * 
+	 * @author: David Klink
+	 * Pizza class created to include methods to define function of creating pizza.  
+	 * See TestPizza.java for more information 
+	 * @created 11/11/2013
+	 * 
+	 */
+
+
+
 public class Pizza 
 {
 	private char size;
@@ -41,15 +52,15 @@ public class Pizza
 			boolean isValid = false;
 			if ((status == 0) || (status == 1) || (status == 2))	{ isValid = true; }
 			else {isValid = false;}
+			
+			this.status = status;
 			return isValid;
 		}
-	// Method to hold the pizza toppings in an array to be used to create order 	
 		
+	// Method to hold the pizza toppings in an array to be used to create order 	
 		public void setToppings(String [] toppings)
 		{
-		
 			this.toppings = toppings;
-			
 		}
 		
 	// Method to hold the number of toppings the user is asked	
@@ -59,13 +70,13 @@ public class Pizza
 			if ( toppings != null) 
 					{t = toppings.length;}
 			else t = 0;
+			
 			return t;
 		}
 		
-		
+		// Method to calculate the price of the pizza.  Uses base size of pizza and number of toppings to determine price.
 		public double calcPrice()
 		{
-					
 			double pizzaPrice = 0.0;
 			
 			switch (size)
@@ -81,7 +92,7 @@ public class Pizza
 					
 				case  'L':
 					pizzaPrice = 10.00;
-					pizzaPrice = pizzaPrice + (toppings.lengthpings * 2.00);
+					pizzaPrice = pizzaPrice + (toppings.length * 2.00);
 					break;
 					
 				default:
