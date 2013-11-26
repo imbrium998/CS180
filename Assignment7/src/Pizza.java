@@ -5,6 +5,7 @@
 	 * Pizza class created to include methods to define function of creating pizza.  
 	 * See TestPizza.java for more information 
 	 * @created 11/11/2013
+	 * @updated 11/26/2013
 	 * 
 	 */
 
@@ -34,23 +35,26 @@ public class Pizza
 			return this.toppings;
 		}
 	
-		
-		public Pizza(char size, String[] toppings)
-		{
-			size = this.size;
-			toppings = this.toppings;
-		}
-		
+		// Begin constructors
 		public Pizza()
 		{
-			//this('M',null);
+			
 			size = 'M';
 			toppings = null;
 			status = NOT_STARTED;
 		}
 		
+		public Pizza(char size, String[] toppings)
+		{
+			size = this.size;
+			toppings = this.toppings;
+			status = NOT_STARTED;
+		}
 		
-
+		
+		
+		
+		// Begin Classes
 		public String statusPhrase()
 		{
 			String phrase = "";
@@ -70,7 +74,10 @@ public class Pizza
 		
 		public String toString()
 		{
-			return "Pizza size " + size + "  Toppings:";
+			return  ("*********************************************************************" + "\r" +
+					 "Pizza size " + size + "  Toppings: " + statusPhrase()) + "\r" +
+					"" 
+					+ "*********************************************************************";
 		}
 		
 		

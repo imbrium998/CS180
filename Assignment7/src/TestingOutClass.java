@@ -6,6 +6,8 @@ public class TestingOutClass {
 		
 		Pizza pizza1 = new Pizza();
 		
+		pizza1.toString()	
+		
 		
 
 		
