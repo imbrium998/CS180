@@ -46,8 +46,8 @@ public class Pizza
 		
 		public Pizza(char size, String[] toppings)
 		{
-			size = this.size;
-			toppings = this.toppings;
+			this.size = size;
+			this.toppings = toppings;
 			status = NOT_STARTED;
 		}
 		
