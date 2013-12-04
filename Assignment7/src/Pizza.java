@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 
 	/**
 	 * 
@@ -54,7 +52,9 @@ public class Pizza
 		
 		
 		
-		// Begin Classes
+		// Begin Methods
+		
+		// Update constants to have a real world output
 		public String statusPhrase()
 		{
 			String phrase = "";
@@ -81,16 +81,7 @@ public class Pizza
 			return phrase;
 		}
 		
-//		public String toString()
-//		{
-//			return  ("*********************************************************************" + "\r" +
-//					 "Pizza size " + size + "  Toppings: " + statusPhrase()) + "\r" +
-//					"" 
-//					+ "*********************************************************************";
-//		}
-		
-		
-		
+
 		
 		
 	// Create method to accept a pizza size */* set size to medium if the input is not valid parameter  
@@ -108,7 +99,7 @@ public class Pizza
 			return isValid;
 		}
 		
-	
+	// toString method to pull all values and text together to output.
 		public String toString() {
 			StringBuilder builder = new StringBuilder();
 			builder.append("************************\n");
@@ -185,6 +176,7 @@ public class Pizza
 
 		}
 		
+		// Main method to test constructors and toString(), creating Pizza objects from hardcoded data and printing out.
 		public static void main(String[] args) {
 			
 			

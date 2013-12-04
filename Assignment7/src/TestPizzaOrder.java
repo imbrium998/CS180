@@ -7,7 +7,7 @@ public class TestPizzaOrder {
 		
 		Pizza[] pizzas = new Pizza[3];
 		
-		Pizza largePizza = new Pizza('L', new String[] {"anchovi","bacon"});
+		Pizza largePizza = new Pizza('L', new String[] {"onion","bacon"});
 		Pizza smallPizza = new Pizza('S', new String[] {"onion","pepperoni","pepper","chicken"});
 		Pizza mediumPizza = new Pizza('M', new String[] {});
 		
