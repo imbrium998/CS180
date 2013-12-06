@@ -8,7 +8,8 @@ public class PizzaOrder
 	private String customer;
 	private Pizza[] orderedPizzas;
 	
-
+	
+	// get Methods for instance variables
 		public String getCustomer() 
 			{
 				return this.customer;
@@ -30,7 +31,7 @@ public class PizzaOrder
 		
 		
 	
-		
+		// method to determine and sum pizza prizes from each order.
 		public double totalPrice()
 			{
 				double totalPrice = 0;
@@ -44,13 +45,13 @@ public class PizzaOrder
 				return totalPrice;
 			}
 	
-		
+		// Method to determine if each of the pizzas in the order are ready.
 		public Boolean isReady()
 			{
 				Boolean isReady = true;
 				for (int i = 0; i < this.orderedPizzas.length; i++)
 				{
-					if (orderedPizzas[i].getStatus() == Pizza.NOT_STARTED || orderedPizzas[i].getStatus() == Pizza.IN_PROGRESS)
+					if (orderedPizzas[i].getStatus() == Pizza.NOT_STARTED || orderedPizzas[i].getStatus() == Pizza.IN_PROGRESS) 
 						{
 							isReady = false;
 							break;
@@ -60,6 +61,8 @@ public class PizzaOrder
 				return isReady;
 			}
 		
+		
+		// toString Method to output the Text of the orders
 		public String toString() {
 			
 			
