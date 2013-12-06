@@ -1,17 +1,14 @@
-import java.util.Arrays;
 
 
 	/**
 	 * 
 	 * @author: David Klink
-	 * Pizza class created to include methods to define function of creating pizza.  
+	 * Pizza class created to include methods to define function of creating a pizza.  
 	 * See TestPizza.java for more information 
 	 * @created 11/11/2013
 	 * @updated 11/26/2013
 	 * 
 	 */
-
-
 
 public class Pizza 
 {
@@ -51,8 +48,7 @@ public class Pizza
 			this.status = NOT_STARTED;
 		}
 		
-		
-		
+	
 		
 		// Begin Classes
 		public String statusPhrase()
@@ -81,16 +77,6 @@ public class Pizza
 			return phrase;
 		}
 		
-//		public String toString()
-//		{
-//			return  ("*********************************************************************" + "\r" +
-//					 "Pizza size " + size + "  Toppings: " + statusPhrase()) + "\r" +
-//					"" 
-//					+ "*********************************************************************";
-//		}
-		
-		
-		
 		
 		
 	// Create method to accept a pizza size */* set size to medium if the input is not valid parameter  
@@ -108,9 +94,21 @@ public class Pizza
 			return isValid;
 		}
 		
+		public String pizzaSize(char size)
+		{	
+			String sizeText = null;
+				if (this.size == 'S') {sizeText = "Small";}
+				else if(this.size == 'M') {sizeText = "Medium";}
+				else if(this.size == 'L') {sizeText = "Large";}
+			
+			return sizeText;
+		}
+		
 	
 		public String toString() {
+			
 			StringBuilder builder = new StringBuilder();
+			
 			builder.append("************************\n");
 			builder.append("Pizza size " + this.size + ". ");
 			 
@@ -159,7 +157,8 @@ public class Pizza
 		// Method to calculate the price of the pizza.  Uses base size of pizza and number of toppings to determine price.
 		public double calcPrice()
 		{
-			double pizzaPrice = 0.0;
+			
+			double pizzaPrice = 0.00;
 			
 			switch (size)
 				{case 'S': 
@@ -181,9 +180,10 @@ public class Pizza
 					pizzaPrice = 0.00;
 					break;}
 			
+			
 				return pizzaPrice;
-
-		}
+		}	
+		
 		
 		public static void main(String[] args) {
 			

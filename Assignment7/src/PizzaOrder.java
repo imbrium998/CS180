@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 
 
 
@@ -60,6 +62,8 @@ public class PizzaOrder
 		
 		public String toString() {
 			
+			
+			DecimalFormat df = new DecimalFormat("0.00");
 			StringBuilder builder = new StringBuilder();
 			builder.append("Order for customer " + this.getCustomer() + ":\n");
 			 
@@ -67,12 +71,12 @@ public class PizzaOrder
 				builder.append("No pizzas ordered.\n");
 			} else {
 				for (int i = 0; i < this.orderedPizzas.length; i++) {
-					builder.append(orderedPizzas[i].getSize() + "pizza, " );
+					builder.append(orderedPizzas[i].pizzaSize(orderedPizzas[1].getSize()) + " pizza, " );
 					builder.append(orderedPizzas[i].numToppings() + " toppings, ");
-					builder.append("$" + orderedPizzas[i].calcPrice() + " ");
+					builder.append("$" + df.format(orderedPizzas[i].calcPrice()) + " ");
 					builder.append("-- " + orderedPizzas[i].statusPhrase() + "\n");
 				};
-				builder.append("Order total: $" + this.totalPrice());
+				builder.append("Order total: $" + df.format(this.totalPrice()));
 			}
 		
 			return builder.toString();

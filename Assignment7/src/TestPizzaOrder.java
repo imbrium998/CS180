@@ -1,6 +1,5 @@
 
 
-
 public class TestPizzaOrder {
 
 	public static void main(String[] args) {
@@ -28,7 +27,7 @@ public class TestPizzaOrder {
 		pizzaorder1.getOrderedPizzas()[0].setStatus(Pizza.READY);
 		pizzaorder1.getOrderedPizzas()[1].setStatus(Pizza.READY);
 		System.out.println(pizzaorder1.toString() + "\n");
-		System.out.println("Order ready is " + pizzaorder1.isReady() + "\n");
+		System.out.println("order ready is " + pizzaorder1.isReady() + "\n");
 		
 	}
 		
